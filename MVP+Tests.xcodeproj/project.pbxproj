@@ -7,7 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E810046C204980AA00C84341 /* UITableViewCell + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E810046B204980AA00C84341 /* UITableViewCell + Extension.swift */; };
+		E810046D204980AA00C84341 /* UITableViewCell + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E810046B204980AA00C84341 /* UITableViewCell + Extension.swift */; };
+		E810046E2049821000C84341 /* UserListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88C3C3820494F6800E1C25C /* UserListPresenter.swift */; };
+		E810047120498D0F00C84341 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E810047020498D0F00C84341 /* Result.swift */; };
+		E810047220498D0F00C84341 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E810047020498D0F00C84341 /* Result.swift */; };
+		E810047520498D9C00C84341 /* StatusCodeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E810047420498D9C00C84341 /* StatusCodeError.swift */; };
+		E810047620498D9C00C84341 /* StatusCodeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E810047420498D9C00C84341 /* StatusCodeError.swift */; };
+		E810047820498E7C00C84341 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E810047720498E7C00C84341 /* ApiResponse.swift */; };
+		E810047920498E7C00C84341 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E810047720498E7C00C84341 /* ApiResponse.swift */; };
 		E88C3C3920494F6800E1C25C /* UserListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88C3C3820494F6800E1C25C /* UserListPresenter.swift */; };
+		E88C3C3C204953AE00E1C25C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88C3C3B204953AE00E1C25C /* UserModel.swift */; };
+		E88C3C3D204953AE00E1C25C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88C3C3B204953AE00E1C25C /* UserModel.swift */; };
+		E88C3C422049577700E1C25C /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88C3C412049577700E1C25C /* UserListTableViewCell.swift */; };
+		E88C3C432049577700E1C25C /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88C3C412049577700E1C25C /* UserListTableViewCell.swift */; };
+		E88C3C462049597900E1C25C /* UserListCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88C3C452049597900E1C25C /* UserListCellPresenter.swift */; };
+		E88C3C472049597900E1C25C /* UserListCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88C3C452049597900E1C25C /* UserListCellPresenter.swift */; };
+		E89134B02049B26B00BE6FF6 /* GetUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89134AF2049B26B00BE6FF6 /* GetUserRequest.swift */; };
+		E89134B12049B26B00BE6FF6 /* GetUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89134AF2049B26B00BE6FF6 /* GetUserRequest.swift */; };
+		E89134B42049B3F000BE6FF6 /* UserDataGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89134B32049B3F000BE6FF6 /* UserDataGateway.swift */; };
+		E89134B52049B3F000BE6FF6 /* UserDataGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89134B32049B3F000BE6FF6 /* UserDataGateway.swift */; };
+		E8D630BC204995ED00CEB21B /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D630BB204995ED00CEB21B /* ApiClient.swift */; };
+		E8D630BD204995ED00CEB21B /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D630BB204995ED00CEB21B /* ApiClient.swift */; };
 		E8DF39842047F98B0099D60F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DF39832047F98B0099D60F /* AppDelegate.swift */; };
 		E8DF39892047F98B0099D60F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8DF39872047F98B0099D60F /* Main.storyboard */; };
 		E8DF398B2047F98B0099D60F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8DF398A2047F98B0099D60F /* Assets.xcassets */; };
@@ -28,7 +49,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E810046B204980AA00C84341 /* UITableViewCell + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell + Extension.swift"; sourceTree = "<group>"; };
+		E810047020498D0F00C84341 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		E810047420498D9C00C84341 /* StatusCodeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCodeError.swift; sourceTree = "<group>"; };
+		E810047720498E7C00C84341 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		E88C3C3820494F6800E1C25C /* UserListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListPresenter.swift; sourceTree = "<group>"; };
+		E88C3C3B204953AE00E1C25C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		E88C3C412049577700E1C25C /* UserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
+		E88C3C452049597900E1C25C /* UserListCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCellPresenter.swift; sourceTree = "<group>"; };
+		E89134AF2049B26B00BE6FF6 /* GetUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserRequest.swift; sourceTree = "<group>"; };
+		E89134B32049B3F000BE6FF6 /* UserDataGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataGateway.swift; sourceTree = "<group>"; };
+		E8D630BB204995ED00CEB21B /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		E8DF39802047F98B0099D60F /* MVP+Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVP+Tests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8DF39832047F98B0099D60F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8DF39882047F98B0099D60F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,6 +90,92 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E810046A2049807E00C84341 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E810046B204980AA00C84341 /* UITableViewCell + Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E810046F20498CCD00C84341 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E89134B22049B3D900BE6FF6 /* Gateways */,
+				E89134AE2049B24A00BE6FF6 /* Requests */,
+				E810047320498D8C00C84341 /* API Core */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		E810047320498D8C00C84341 /* API Core */ = {
+			isa = PBXGroup;
+			children = (
+				E810047020498D0F00C84341 /* Result.swift */,
+				E810047420498D9C00C84341 /* StatusCodeError.swift */,
+				E810047720498E7C00C84341 /* ApiResponse.swift */,
+				E8D630BB204995ED00CEB21B /* ApiClient.swift */,
+			);
+			path = "API Core";
+			sourceTree = "<group>";
+		};
+		E88C3C3A2049539000E1C25C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E88C3C3B204953AE00E1C25C /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E88C3C3E2049561F00E1C25C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				E8DF39832047F98B0099D60F /* AppDelegate.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		E88C3C3F2049573B00E1C25C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E88C3C402049575B00E1C25C /* UserListCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E88C3C402049575B00E1C25C /* UserListCell */ = {
+			isa = PBXGroup;
+			children = (
+				E88C3C412049577700E1C25C /* UserListTableViewCell.swift */,
+				E88C3C452049597900E1C25C /* UserListCellPresenter.swift */,
+			);
+			path = UserListCell;
+			sourceTree = "<group>";
+		};
+		E89134AE2049B24A00BE6FF6 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				E89134B62049B47D00BE6FF6 /* User */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		E89134B22049B3D900BE6FF6 /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				E89134B32049B3F000BE6FF6 /* UserDataGateway.swift */,
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
+		E89134B62049B47D00BE6FF6 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				E89134AF2049B26B00BE6FF6 /* GetUserRequest.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		E8DF39772047F98B0099D60F = {
 			isa = PBXGroup;
 			children = (
@@ -81,8 +198,11 @@
 			isa = PBXGroup;
 			children = (
 				E8DF39A42047FBE30099D60F /* Scenes */,
+				E88C3C3A2049539000E1C25C /* Models */,
+				E810046F20498CCD00C84341 /* API */,
+				E810046A2049807E00C84341 /* Extension */,
+				E88C3C3E2049561F00E1C25C /* Other */,
 				E8DF39A32047FBD30099D60F /* Resources */,
-				E8DF39832047F98B0099D60F /* AppDelegate.swift */,
 			);
 			path = "MVP+Tests";
 			sourceTree = "<group>";
@@ -118,8 +238,9 @@
 		E8DF39A52047FC0F0099D60F /* UsersList */ = {
 			isa = PBXGroup;
 			children = (
-				E8DF39A62047FC330099D60F /* UserListsViewController.swift */,
+				E88C3C3F2049573B00E1C25C /* Cells */,
 				E88C3C3820494F6800E1C25C /* UserListPresenter.swift */,
+				E8DF39A62047FC330099D60F /* UserListsViewController.swift */,
 			);
 			path = UsersList;
 			sourceTree = "<group>";
@@ -227,9 +348,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8D630BC204995ED00CEB21B /* ApiClient.swift in Sources */,
+				E88C3C422049577700E1C25C /* UserListTableViewCell.swift in Sources */,
+				E810046C204980AA00C84341 /* UITableViewCell + Extension.swift in Sources */,
+				E88C3C462049597900E1C25C /* UserListCellPresenter.swift in Sources */,
+				E810047820498E7C00C84341 /* ApiResponse.swift in Sources */,
 				E8DF39842047F98B0099D60F /* AppDelegate.swift in Sources */,
 				E88C3C3920494F6800E1C25C /* UserListPresenter.swift in Sources */,
+				E810047520498D9C00C84341 /* StatusCodeError.swift in Sources */,
+				E89134B42049B3F000BE6FF6 /* UserDataGateway.swift in Sources */,
+				E88C3C3C204953AE00E1C25C /* UserModel.swift in Sources */,
+				E810047120498D0F00C84341 /* Result.swift in Sources */,
 				E8DF39A72047FC330099D60F /* UserListsViewController.swift in Sources */,
+				E89134B02049B26B00BE6FF6 /* GetUserRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,8 +368,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8D630BD204995ED00CEB21B /* ApiClient.swift in Sources */,
+				E88C3C472049597900E1C25C /* UserListCellPresenter.swift in Sources */,
+				E88C3C432049577700E1C25C /* UserListTableViewCell.swift in Sources */,
+				E810046E2049821000C84341 /* UserListPresenter.swift in Sources */,
+				E810047920498E7C00C84341 /* ApiResponse.swift in Sources */,
 				E8DF39992047F98B0099D60F /* MVP_TestsTests.swift in Sources */,
+				E810046D204980AA00C84341 /* UITableViewCell + Extension.swift in Sources */,
+				E810047620498D9C00C84341 /* StatusCodeError.swift in Sources */,
+				E89134B52049B3F000BE6FF6 /* UserDataGateway.swift in Sources */,
+				E88C3C3D204953AE00E1C25C /* UserModel.swift in Sources */,
+				E810047220498D0F00C84341 /* Result.swift in Sources */,
 				E8DF39A82047FC330099D60F /* UserListsViewController.swift in Sources */,
+				E89134B12049B26B00BE6FF6 /* GetUserRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,7 +527,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E3G5K9X7S4;
-				INFOPLIST_FILE = "MVP+Tests/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MVP+Tests/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Mike.MVP-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -400,7 +543,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E3G5K9X7S4;
-				INFOPLIST_FILE = "MVP+Tests/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MVP+Tests/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Mike.MVP-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
