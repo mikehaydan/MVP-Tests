@@ -9,8 +9,8 @@
 import UIKit
 
 protocol UserListCellDelegate: class {
-    func detailsButtonTappedForCellAt(indexPath: IndexPath)
-    func albumsButtonTappedForCellAt(indexPath: IndexPath)
+    func detailsButtonTappedForCellAt(index: Int)
+    func albumsButtonTappedForCellAt(index: Int)
 }
 protocol UserListCellView: class {
     var presenter: UserListCellPresenter! { get }
@@ -20,7 +20,7 @@ protocol UserListCellView: class {
 
 protocol UserListCellPresenter {
     init(view: UserListCellView)
-    func configureWith(model: UserModel, delegate: UserListCellDelegate?, atIndexPath indexPAth: IndexPath)
+    func configureWith(model: UserModel, delegate: UserListCellDelegate?, atIndex index: Int)
     func prepareViewUI()
     func detailsButtonTapped()
     func albumsButtonTapped()
@@ -32,7 +32,7 @@ class UserListCellPresenterImplementation: UserListCellPresenter {
     
     unowned let view: UserListCellView
     
-    private var indexPath: IndexPath!
+    private var index: Int!
     
     private weak var delegate: UserListCellDelegate?
     
@@ -48,8 +48,8 @@ class UserListCellPresenterImplementation: UserListCellPresenter {
     
     //MARK: - Public
     
-    func configureWith(model: UserModel, delegate: UserListCellDelegate?, atIndexPath indexPath: IndexPath) {
-        self.indexPath = indexPath
+    func configureWith(model: UserModel, delegate: UserListCellDelegate?, atIndex index: Int) {
+        self.index = index
         self.delegate = delegate
         view.set(userName: model.userName, fullName: model.name)
     }
@@ -59,11 +59,11 @@ class UserListCellPresenterImplementation: UserListCellPresenter {
     }
     
     func detailsButtonTapped() {
-        delegate?.detailsButtonTappedForCellAt(indexPath: indexPath)
+        delegate?.detailsButtonTappedForCellAt(index: index)
     }
     
     func albumsButtonTapped() {
-        delegate?.albumsButtonTappedForCellAt(indexPath: indexPath)
+        delegate?.albumsButtonTappedForCellAt(index: index)
     }
     
 }

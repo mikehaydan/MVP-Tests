@@ -32,11 +32,11 @@ class UserListTableViewCell: UITableViewCell, UserListCellView {
     
     //MARK: - IBActions
     
-    @IBAction private func detailsButtonTapped(_ sender: Any) {
+    @IBAction func detailsButtonTapped(_ sender: Any) {
         presenter.detailsButtonTapped()
     }
     
-    @IBAction private func albumsButtonTapped(_ sender: Any) {
+    @IBAction func albumsButtonTapped(_ sender: Any) {
         presenter.albumsButtonTapped()
     }
     

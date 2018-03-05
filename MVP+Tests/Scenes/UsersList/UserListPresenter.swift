@@ -11,15 +11,18 @@ import UIKit
 protocol UserListPresenter {
     var userCellIdentifier: String { get }
     var dataSourceCount: Int { get }
-    init(view: UserListView)
+    init(view: UserListView, request: UserDataGateway)
     func configureTableView()
-    func configure(view: UserListCellView, atIndexPath indexPath: IndexPath)
+    func configure(view: UserListCellView, atIndex index: Int)
     func getUsers()
 }
 
 protocol UserListView: class {
-    func register(nib: UINib, forCellIdentifier identifier: String)
+    func registerNibWith(name: String, forCellIdentifier identifier: String)
     func refreshTableView()
+    func detailsButtonTappedForCellWith(model: UserModel)
+    func albumsButtonTappedForCellWith(model: UserModel)
+    func display(message: String)
 }
 
 class UserListPresenterImplementation: UserListPresenter {
@@ -36,17 +39,15 @@ class UserListPresenterImplementation: UserListPresenter {
     
     private unowned var view: UserListView
     
-    private var dataSource: [UserModel] = []
+    var dataSource: [UserModel] = []
     
     private var getUserRequest: UserDataGateway
     
     //MARK: - LifeCycle
     
-    required init(view: UserListView) {
+    required init(view: UserListView, request: UserDataGateway) {
         self.view = view
-        
-        let apiClient = ApiClientImplelentation(urlSessionconfiguration: .default, completionQueue: .main)
-        getUserRequest = UserDataGatewayImplelementation(apiClient: apiClient)
+        self.getUserRequest = request
     }
 
     //MARK: - Private
@@ -54,12 +55,12 @@ class UserListPresenterImplementation: UserListPresenter {
     //MARK: - Public
     
     func configureTableView() {
-        view.register(nib: UserListTableViewCell.nib, forCellIdentifier: userCellIdentifier)
+        view.registerNibWith(name: UserListTableViewCell.nibName, forCellIdentifier: userCellIdentifier)
     }
     
-    func configure(view: UserListCellView, atIndexPath indexPath: IndexPath) {
-        let model = dataSource[indexPath.row]
-        view.presenter.configureWith(model: model, delegate: self, atIndexPath: indexPath)
+    func configure(view: UserListCellView, atIndex index: Int) {
+        let model = dataSource[index]
+        view.presenter.configureWith(model: model, delegate: self, atIndex: index)
     }
     
     func getUsers() {
@@ -72,7 +73,7 @@ class UserListPresenterImplementation: UserListPresenter {
                 strongSelf.dataSource = models
                 strongSelf.view.refreshTableView()
             case let .failure(error):
-                print(error.localizedDescription)
+                strongSelf.view.display(message: error.localizedDescription)
             }
         }
     }
@@ -82,11 +83,13 @@ class UserListPresenterImplementation: UserListPresenter {
 
 extension UserListPresenterImplementation: UserListCellDelegate {
     
-    func detailsButtonTappedForCellAt(indexPath: IndexPath) {
-        
+    func detailsButtonTappedForCellAt(index: Int) {
+        let model = dataSource[index]
+        view.detailsButtonTappedForCellWith(model: model)
     }
     
-    func albumsButtonTappedForCellAt(indexPath: IndexPath) {
-        
+    func albumsButtonTappedForCellAt(index: Int) {
+        let model = dataSource[index]
+        view.albumsButtonTappedForCellWith(model: model)
     }
 }

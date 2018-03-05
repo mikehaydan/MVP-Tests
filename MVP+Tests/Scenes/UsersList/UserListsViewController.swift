@@ -21,7 +21,9 @@ class UserListsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter = UserListPresenterImplementation(view: self)
+        let apiClient = ApiClientImplelentation.defaultConfiguration
+        let getUserRequest = UserDataGatewayImplelementation(apiClient: apiClient)
+        presenter = UserListPresenterImplementation(view: self, request: getUserRequest)
         presenter.getUsers()
     }
     
@@ -41,15 +43,27 @@ class UserListsViewController: UIViewController {
 
 extension UserListsViewController: UserListView {
     
-    func register(nib: UINib, forCellIdentifier identifier: String) {
+    func registerNibWith(name: String, forCellIdentifier identifier: String) {
+        let nib = UINib(nibName: name, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: identifier)
     }
     
     func refreshTableView() {
         tableView.reloadData()
     }
+    
+    func detailsButtonTappedForCellWith(model: UserModel) {
+        
+    }
+    
+    func albumsButtonTappedForCellWith(model: UserModel) {
+        
+    }
+    
+    func display(message: String) {
+        print(message)
+    }
 }
-
 
 //MARK: - UITableViewDataSource
 
@@ -61,7 +75,7 @@ extension UserListsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: presenter.userCellIdentifier, for: indexPath) as! UserListTableViewCell
-        presenter.configure(view: cell, atIndexPath: indexPath)
+        presenter.configure(view: cell, atIndex: indexPath.row)
         return cell
     }
 }

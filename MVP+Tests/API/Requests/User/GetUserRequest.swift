@@ -27,11 +27,11 @@ class UserDataGatewayImplelementation: UserDataGateway {
     
     func fetchUsers(completion: @escaping (Result<[UserModel]>) -> ()) {
         let request = GetUsersRequest()
-        apiClient.execute(request: request) { (result: Result<ApiResponse<[UserModel]>>) in
+        apiClient.execute(request: request) { (result: Result<ApiResponse<[UserApiModel]>>) in
             switch result {
             case let .success(response):
                 let resultModels = response.model
-                completion(.success(resultModels))
+                completion(.success(resultModels.map({ $0.user })))
             case let .failure(error):
                 completion(.failure(error))
             }

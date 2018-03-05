@@ -31,6 +31,10 @@ class ApiClientImplelentation: ApiClient {
     
     private let urlSession: URLSessionProtocol
     
+    class var defaultConfiguration: ApiClientImplelentation {
+        return ApiClientImplelentation(urlSessionconfiguration: .default, completionQueue: .main)
+    }
+    
     init(urlSessionconfiguration: URLSessionConfiguration, completionQueue: OperationQueue) {
         urlSession = URLSession(configuration: urlSessionconfiguration, delegate: nil, delegateQueue: completionQueue)
     }
