@@ -14,6 +14,8 @@
 		E8409A64204D98ED00225C84 /* GetUserRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8409A63204D98ED00225C84 /* GetUserRequestTest.swift */; };
 		E8409A66204E836900225C84 /* UrlSessionStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8409A65204E836900225C84 /* UrlSessionStub.swift */; };
 		E8409A68204E84BD00225C84 /* ApiClientImplelentationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8409A67204E84BD00225C84 /* ApiClientImplelentationSpy.swift */; };
+		E8409A6A204EA11300225C84 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8409A69204EA11300225C84 /* Result.swift */; };
+		E8409A6E204EB85900225C84 /* Jenkinsfile in Resources */ = {isa = PBXBuildFile; fileRef = E8409A6D204EB85900225C84 /* Jenkinsfile */; };
 		E88C3C3920494F6800E1C25C /* UserListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88C3C3820494F6800E1C25C /* UserListPresenter.swift */; };
 		E88C3C3C204953AE00E1C25C /* UserApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88C3C3B204953AE00E1C25C /* UserApiModel.swift */; };
 		E88C3C422049577700E1C25C /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88C3C412049577700E1C25C /* UserListTableViewCell.swift */; };
@@ -55,6 +57,8 @@
 		E8409A63204D98ED00225C84 /* GetUserRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserRequestTest.swift; sourceTree = "<group>"; };
 		E8409A65204E836900225C84 /* UrlSessionStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSessionStub.swift; sourceTree = "<group>"; };
 		E8409A67204E84BD00225C84 /* ApiClientImplelentationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientImplelentationSpy.swift; sourceTree = "<group>"; };
+		E8409A69204EA11300225C84 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		E8409A6D204EB85900225C84 /* Jenkinsfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Jenkinsfile; sourceTree = "<group>"; };
 		E8520561204AD45D005D0EAC /* UserDataGatewayStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataGatewayStub.swift; sourceTree = "<group>"; };
 		E8520567204AD6DB005D0EAC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		E88C3C3820494F6800E1C25C /* UserListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListPresenter.swift; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 				E8520560204AD42B005D0EAC /* Requests */,
 				E8409A65204E836900225C84 /* UrlSessionStub.swift */,
 				E8409A67204E84BD00225C84 /* ApiClientImplelentationSpy.swift */,
+				E8409A69204EA11300225C84 /* Result.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 		E8DF39772047F98B0099D60F = {
 			isa = PBXGroup;
 			children = (
+				E8409A6D204EB85900225C84 /* Jenkinsfile */,
 				E8DF39822047F98B0099D60F /* MVP+Tests */,
 				E8DF39972047F98B0099D60F /* MVP+TestsTests */,
 				E8DF39812047F98B0099D60F /* Products */,
@@ -408,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8DF398E2047F98B0099D60F /* LaunchScreen.storyboard in Resources */,
+				E8409A6E204EB85900225C84 /* Jenkinsfile in Resources */,
 				E8DF398B2047F98B0099D60F /* Assets.xcassets in Resources */,
 				E8DF39892047F98B0099D60F /* Main.storyboard in Resources */,
 			);
@@ -448,6 +455,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8409A6A204EA11300225C84 /* Result.swift in Sources */,
 				E8CC4378204ADD1F00432FCE /* UserModel.swift in Sources */,
 				E8CC4379204ADD1F00432FCE /* UserDataGatewayStub.swift in Sources */,
 				E8CC4381204AEB2F00432FCE /* UserListCellViewSpy.swift in Sources */,

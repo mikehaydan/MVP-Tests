@@ -27,5 +27,9 @@ class UrlSessionStub: URLSessionProtocol {
             self.testDoubleResponse = response
             self.completionHandler = completionHandler
         }
+        
+        override func resume() {
+            completionHandler(testDoubleResponse.data, testDoubleResponse.response, testDoubleResponse.error)
+        }
     }
 }

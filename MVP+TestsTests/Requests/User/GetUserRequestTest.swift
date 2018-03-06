@@ -9,7 +9,6 @@
 import XCTest
 @testable import MVP_Tests
 
-
 class GetUserRequestTest: XCTestCase {
     
     var userDataRequest: UserDataGatewayImplelementation!
@@ -22,9 +21,10 @@ class GetUserRequestTest: XCTestCase {
     }
     
     func test_fetchUsers_success() {
-        //given
         
+        //given
         let expectedStringResponse: String = """
+        [
         {
             "id": 1,
             "name": "Leanne Graham",
@@ -48,9 +48,21 @@ class GetUserRequestTest: XCTestCase {
                 "bs": "harness real-time e-markets"
             }
         }
+        ]
     """
         let expectedData = expectedStringResponse.data(using: .utf8)
         let expectedHttpResponse = HTTPURLResponse(statusCode: 200)
+        let expectedUsersModel: [UserApiModel] = try! Array(data: expectedData)
+        let expectedResult = Result.success(expectedUsersModel.map({ $0.user }))
+        let fetchExpectation = expectation(description: "Get Users Expectation")
+        apiClient.set(response: (expectedData, expectedHttpResponse, nil))
+        
+        //when
+        userDataRequest.fetchUsers { (response) in
+            XCTAssertEqual(response, expectedResult, "Response is not the same")
+            fetchExpectation.fulfill()
+        }
+        wait(for: [fetchExpectation], timeout: 1)
     }
     
 }
