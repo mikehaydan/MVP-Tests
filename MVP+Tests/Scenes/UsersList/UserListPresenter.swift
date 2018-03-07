@@ -65,15 +65,14 @@ class UserListPresenterImplementation: UserListPresenter {
     
     func getUsers() {
         getUserRequest.fetchUsers { [weak self] (result) in
-            guard let strongSelf = self else {
-                return
-            }
-            switch result {
-            case let .success(models):
-                strongSelf.dataSource = models
-                strongSelf.view.refreshTableView()
-            case let .failure(error):
-                strongSelf.view.display(message: error.localizedDescription)
+            if let strongSelf = self {
+                switch result {
+                case let .success(models):
+                    strongSelf.dataSource = models
+                    strongSelf.view.refreshTableView()
+                case let .failure(error):
+                    strongSelf.view.display(message: error.localizedDescription)
+                }
             }
         }
     }

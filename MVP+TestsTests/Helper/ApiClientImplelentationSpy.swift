@@ -10,12 +10,6 @@ import Foundation
 
 @testable import MVP_Tests
 
-class ApiRequestStub: ApiRequest {
-    var urlRequest: URLRequest {
-        return URLRequest(url: URL(string: "https://www.google.com")!)
-    }
-}
-
 class ApiClientImplelentationSpy: ApiClient {
     typealias URLSessionCompletionHandlerResponse = (data: Data?, response: URLResponse?, error: Error?)
     
