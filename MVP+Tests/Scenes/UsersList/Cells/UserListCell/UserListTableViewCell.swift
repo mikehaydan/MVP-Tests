@@ -33,7 +33,7 @@ class UserListTableViewCell: UITableViewCell, UserListCellView {
     //MARK: - IBActions
     
     @IBAction func detailsButtonTapped(_ sender: Any) {
-        presenter.detailsButtonTapped()//
+        presenter.detailsButtonTapped()//asdasd
     }
     
     @IBAction func albumsButtonTapped(_ sender: Any) {
