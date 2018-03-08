@@ -25,7 +25,7 @@ class UserListCellPresenterTest: XCTestCase {
         
         //given
         let expectedDetailsText = "User details"
-        let expectedAlbumsText = "Albumsіі"
+        let expectedAlbumsText = "Albums"
         
         //when
         presenter.prepareViewUI()
